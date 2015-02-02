@@ -28,8 +28,13 @@
 
 \vspace{.1in}
 {\bf Answer:}
+\\* \indent If c = 1, $g(n) = 1 + 1 + . . .  + 1 = n + 1 = \Theta(n)$. Otherwise:
+\\* \\* \indent \indent \indent $g(n) = \frac{c^{n + 1} - 1}{c - 1} = \frac{1 - c^{n + 1}}{1 - c}$ \\* 
 
+\indent If $c < 1$, then $1 - c < 1 - c^{n + 1} < 1$. So, $1 < g(n) < \frac{1}{1 - c}$. Thus, $g(n) = \Theta(1)$ \\*
 
+\indent If $c > 1$, then $c^{n + 1} > c^{n + 1} - 1 > c^n$. So, $\frac{c^n}{1 - c} < g(n) < \frac{c}{1 - c} * c^n$. \\*
+\indent Thus, $g(n) = \Theta(c^n)$
 
 \vspace{.5in}
 \noindent 3) Determine the number of Paths of length 2 in a complete graph of \textit{n} nodes.
