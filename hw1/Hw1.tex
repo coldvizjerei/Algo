@@ -43,22 +43,29 @@
 \indent (i) $f(n) = n^0.1$ and $g(n) = ($log $n)^{10}$\\*
 \indent \indent Similar to problems g and h, $f = \Omega(g)$\\*
 %10
-\indent (j) \\*
+\indent (j) $f(n) = (logn)^{logn}$ and $g(n) = \frac{n}{logn}$\\*
+\indent \indent The function $f(n) = n^{loglogn}$, thus $f = \Omega(g)$\\*
 %11
-\indent (k) \\*
+\indent (k) $f(n) = \sqrt{n}$ and $g(n) = (logn)^3$\\*
+\indent \indent Again, $f = \Omega(g)$\\*
 %12
-\indent (l) \\*
+\indent (l) $f(n) = n^{1/2}$ and $g(n) = 5^{\log_2 n}$\\*
+\indent \indent $g(n) = n^{\log_2 5} \approx  n^{2.32}$ thus, $f = O(g)$\\*
 %13
-\indent (m) \\*
+\indent (m) $f(n) = n2^2$ and $g(n) = 3^n$\\*
+\indent \indent Here, $f = O(g)$\\*
 %14
-\indent (n) \\*
+\indent (n) $f(n) = 2^n$ and $g(n) = 2^{n + 1}$\\*
+\indent \indent Here, $f = \Theta(g)$\\*
 %15
-\indent (o) \\*
+\indent (o) $f(n) = n!$ and $g(n) = 2^n$\\*
+\indent \indent It seems that $n! > \sqrt{2\pi n(\frac{n}{e})^n}$. Thus, $f = O(g)$\\*
 %16
-\indent (p) \\*
+\indent (p) $f(n) = (\log n)^{\log n}$ and $g(n) = 2^{({\log_2 n})^2}$\\*
+\indent \indent The function $f(n) = n^{\log \log n}$ and the function $g(n) = (2^{\log_2 n})^{\log_2 n} = n^{\log_2 n}$. Thus, $f = O(g)$\\*
 %17
-\indent (q) \\*
-
+\indent (q) $f(n) = \sum\limits_{i=1}^n i^k$ and $g(n) = n^{k + 1}$\\*
+\indent \indent  \\*  %NOT FINISHED
 
 \vspace{.5in}
 \noindent 2) Show that, if \textit{c} is a positive real number, then \textit{g(n)} = 1 + \textit{c} + $c^2$ + . . . + 
