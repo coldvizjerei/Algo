@@ -1,11 +1,16 @@
 \documentclass{article}
 
 \begin{document}
-\noindent {\bf {\large Group Members: Stephen Kuo, Derek Mui}}
+\begin{center}
+\bf{\LARGE CS344: Design and Analysis of Computer Algorithms} \\*
+
+\vspace{0.2in}
+{\bf {\Large Homework 1}}
+\end{center}
 
 \vspace{.2in}
 
-\noindent {\bf {Homework 1}}
+\noindent {\bf {\large Group Members: Stephen Kuo, Derek Mui}}
 
 \vspace{.2in}
 \noindent 1) In each of the following situations, indicate whether $f  = O(g)$, or $f = \Omega(g)$, 
@@ -14,58 +19,83 @@
 \vspace{.1in}
 {\bf Answer:} \\*
 %1
-\indent (a) $f(n) = n - 100$ and $g(n) = n - 200$ \\*
-\indent \indent Both are $O(n)$, so $f = \Theta(g)$ \\*
+\indent (a) $f(n) = n - 100$ and $g(n) = n - 200$ \\
+\indent \indent Both are $O(n)$, so $f = \Theta(g)$ \\
+
 %2
-\indent (b) $f(n) = n^{1/2}$ and $g(n) = n^{2/3}$\\*
-\indent \indent Since they're both power s of $n$, compare the powers. $\frac{1}{2} < \frac{2}{3}$ so $f = O(g)$ \\*
+\indent (b) $f(n) = n^{1/2}$ and $g(n) = n^{2/3}$\\
+\indent \indent Since they're both power s of $n$, compare the powers. $\frac{1}{2} < \frac{2}{3}$ so $f = O(g)$ \\
+
 %3
-\indent (c) $f(n) = 100n + $log $n$ and $g(n) = n + ($log $n)^2$\\*
-\indent \indent They are both $O(n)$ so $f = \Theta(g)$ \\*
+\indent (c) $f(n) = 100n + $log $n$ and $g(n) = n + ($log $n)^2$\\
+\indent \indent They are both $O(n)$ so $f = \Theta(g)$ \\
+
 %4
-\indent (d) $f(n)  = n$ log $n$ and $g(n) = 10n$ log $10n$\\*
-\indent \indent They are both $O($log $n)$ so $f = \Theta(g)$ \\*
+\indent (d) $f(n)  = n$ log $n$ and $g(n) = 10n$ log $10n$\\
+\indent \indent They are both $O($log $n)$ so $f = \Theta(g)$ \\
+
 %5
-\indent (e) $f(n) = $log $2n$ and $g(n) = $log $3n$\\*
-\indent \indent They are both $O($log $n)$ so $f = \Theta(g)$ \\*
+\indent (e) $f(n) = $log $2n$ and $g(n) = $log $3n$\\
+\indent \indent They are both $O($log $n)$ so $f = \Theta(g)$ \\
+
 %6
-\indent (f) $f(n) = 10$ log $n$ and $g(n) = $log $(n^2)$ \\*
-\indent \indent Both are $O($log $n)$ so $f = \Theta(g)$ \\*
+\indent (f) $f(n) = 10$ log $n$ and $g(n) = $log $(n^2)$ \\
+\indent \indent Both are $O($log $n)$ so $f = \Theta(g)$ \\
+
 %7
-\indent (g) $f(n) = n^{1.01}$ and $g(n) = n log^2n$\\*
-\indent \indent If both sides are divided by $n$ we then need to compare $n^{0.01}$ and $log^2n$. \\*
-\indent \indent Ultimately, the power function wins, so $f = \Omega(g)$\\*
+\indent (g) $f(n) = n^{1.01}$ and $g(n) = n log^2n$\\
+\indent \indent If both sides are divided by $n$ we then need to compare $n^{0.01}$ and $log^2n$. \\
+\indent \indent Ultimately, the power function wins, so $f = \Omega(g)$\\
+
 %8
-\indent (h) $f(n) = \frac{n^2}{logn}$and $g(n) = n($log $n)^2$\\*
-\indent \indent Divide both sides by $\frac{n}{logn}$ and we will only need to compare $n$ and $(logn)^3$. \\*
-\indent \indent The result is $f = \Omega(g)$\\*
+\indent (h) $f(n) = \frac{n^2}{logn}$and $g(n) = n($log $n)^2$\\
+\indent \indent Divide both sides by $\frac{n}{logn}$ and we will only need to compare $n$ and $(logn)^3$. \\
+\indent \indent The result is $f = \Omega(g)$\\
+
 %9
-\indent (i) $f(n) = n^0.1$ and $g(n) = ($log $n)^{10}$\\*
-\indent \indent Similar to problems g and h, $f = \Omega(g)$\\*
+\indent (i) $f(n) = n^0.1$ and $g(n) = ($log $n)^{10}$\\
+\indent \indent Similar to problems g and h, $f = \Omega(g)$\\
+
 %10
-\indent (j) $f(n) = (logn)^{logn}$ and $g(n) = \frac{n}{logn}$\\*
-\indent \indent The function $f(n) = n^{loglogn}$, thus $f = \Omega(g)$\\*
+\indent (j) $f(n) = (logn)^{logn}$ and $g(n) = \frac{n}{logn}$\\
+\indent \indent The function $f(n) = n^{loglogn}$, thus $f = \Omega(g)$\\
+
 %11
-\indent (k) $f(n) = \sqrt{n}$ and $g(n) = (logn)^3$\\*
-\indent \indent Again, $f = \Omega(g)$\\*
+\indent (k) $f(n) = \sqrt{n}$ and $g(n) = (logn)^3$\\
+\indent \indent Again, $f = \Omega(g)$\\
+
 %12
-\indent (l) $f(n) = n^{1/2}$ and $g(n) = 5^{\log_2 n}$\\*
-\indent \indent $g(n) = n^{\log_2 5} \approx  n^{2.32}$ thus, $f = O(g)$\\*
+\indent (l) $f(n) = n^{1/2}$ and $g(n) = 5^{\log_2 n}$\\
+\indent \indent $g(n) = n^{\log_2 5} \approx  n^{2.32}$ thus, $f = O(g)$\\
+
 %13
-\indent (m) $f(n) = n2^2$ and $g(n) = 3^n$\\*
-\indent \indent Here, $f = O(g)$\\*
+\indent (m) $f(n) = n2^2$ and $g(n) = 3^n$\\
+\indent \indent $\lim_{n \to +\infty}$ $\frac{n * 2^n}{3^n} = \frac{n}{1.5^n} \Rightarrow f = O(g)$\\
+
 %14
-\indent (n) $f(n) = 2^n$ and $g(n) = 2^{n + 1}$\\*
-\indent \indent Here, $f = \Theta(g)$\\*
+\indent (n) $f(n) = 2^n$ and $g(n) = 2^{n + 1}$\\
+\indent \indent Here, $f = \Theta(g)$\\
+
 %15
-\indent (o) $f(n) = n!$ and $g(n) = 2^n$\\*
-\indent \indent It seems that $n! > \sqrt{2\pi n(\frac{n}{e})^n}$. Thus, $f = O(g)$\\*
+\indent (o) $f(n) = n!$ and $g(n) = 2^n$\\
+\indent \indent It seems that $n! > \sqrt{2\pi n(\frac{n}{e})^n}$. Thus, $f = O(g)$\\
+
 %16
-\indent (p) $f(n) = (\log n)^{\log n}$ and $g(n) = 2^{({\log_2 n})^2}$\\*
-\indent \indent The function $f(n) = n^{\log \log n}$ and the function $g(n) = (2^{\log_2 n})^{\log_2 n} = n^{\log_2 n}$. Thus, $f = O(g)$\\*
+\indent (p) $f(n) = (\log n)^{\log n}$ and $g(n) = 2^{({\log_2 n})^2}$\\
+\indent \indent The function $f(n) = n^{\log \log n}$ and the function \\
+\indent \indent $g(n) = (2^{\log_2 n})^{\log_2 n} = n^{\log_2 n}$. Thus, $f = O(g)$\\
+
 %17
-\indent (q) $f(n) = \sum\limits_{i=1}^n i^k$ and $g(n) = n^{k + 1}$\\*
-\indent \indent  \\*  %NOT FINISHED
+\indent (q) $f(n) = \sum\limits_{i=1}^n i^k$ and $g(n) = n^{k + 1}$\\
+$f(n) = 1^k + 2^k + . . . + n^k \le n^k + n^k + . . . n^k = n*n^k = n^{k + 1} = g(n) \Rightarrow f(n) = O(g(n))$\\
+
+\vspace{0.1in}
+Also: \\
+$f(n) = 1^k + 2^k + . . . + (\frac{n}{2})^k + (\frac{n}{2} + 1)^ k + . . . + n^k \ge \frac{n^k}{2^k} + \frac{n^k}{2^k} + . . . + \frac{n^k}{2^k} = \frac{n}{2} * \frac{1}{2^k} * n^k = n^{k + 1} * \frac{1}{2^{k + 1}} \Rightarrow f = \Omega(g)$ \\
+
+\vspace{0.1in}
+Thus, $f = \Theta(g)$
+
 
 \vspace{.5in}
 \noindent 2) Show that, if \textit{c} is a positive real number, then \textit{g(n)} = 1 + \textit{c} + $c^2$ + . . . + 
@@ -80,12 +110,14 @@
 
 \vspace{.1in}
 {\bf Answer:}
-\\* \indent If c = 1, $g(n) = 1 + 1 + . . .  + 1 = n + 1 = \Theta(n)$. Otherwise:
-\\* \\* \indent \indent \indent $g(n) = \frac{c^{n + 1} - 1}{c - 1} = \frac{1 - c^{n + 1}}{1 - c}$ \\* 
+\\*
+\indent If c = 1, $g(n) = 1 + 1 + . . .  + 1 = n + 1 = \Theta(n)$. Otherwise: \\
 
-\indent If $c < 1$, then $1 - c < 1 - c^{n + 1} < 1$. So, $1 < g(n) < \frac{1}{1 - c}$. Thus, $g(n) = \Theta(1)$ \\*
+\indent \indent \indent $g(n) = \frac{c^{n + 1} - 1}{c - 1} = \frac{1 - c^{n + 1}}{1 - c}$ \\
 
-\indent If $c > 1$, then $c^{n + 1} > c^{n + 1} - 1 > c^n$. So, $\frac{c^n}{1 - c} < g(n) < \frac{c}{1 - c} * c^n$. \\*
+\indent If $c < 1$, then $1 - c < 1 - c^{n + 1} < 1$. So, $1 < g(n) < \frac{1}{1 - c}$. Thus, $g(n) = \Theta(1)$ \\
+
+\indent If $c > 1$, then $c^{n + 1} > c^{n + 1} - 1 > c^n$. So, $\frac{c^n}{1 - c} < g(n) < \frac{c}{1 - c} * c^n$. \\
 \indent Thus, $g(n) = \Theta(c^n)$
 
 \vspace{.5in}
@@ -93,8 +125,7 @@
 \indent Give your answer in Big-\textit{O} notation as a function of \textit{n}.
 
 \vspace{.1in}
-{\bf Answer:}
-
+{\bf Answer:} If a graph has 3 vertices, then there are 3 paths of length 2 on that particular graph. Thus, that gives us 3$a \choose b$
 
 
 \end{document}
