@@ -5,7 +5,7 @@
 \bf{\LARGE CS344: Design and Analysis of Computer Algorithms} \\*
 
 \vspace{0.2in}
-{\bf {\Large Homework 1}}
+{\bf {\Large Homework 2}}
 \end{center}
 
 \vspace{.2in}
@@ -16,7 +16,17 @@
 \noindent 1.11) Is $4^{1536} - 9^{4824}$ divisible by 35? \\
 \vspace{.1in}
 {\bf Answer:} \\
-\indent temp
+\indent $4^{1536} = (4^3)^{512} = 64^{512} = (35 + 29)^{512}$ \\
+\indent Since 35 is divisible by 35, we can continue with $29^{512}$ \\
+\indent $29^{512} = (29^2)^{256} = 841^{256} = (840 + 1)^{256}$ \\
+\indent Since 840 is divisible by 35, we are left with $1^{256}$ mod 35 \\
+
+\indent $9^4824 = (9^2)^{2412} = 81^{2412} = (70 + 11)^{2412}$ \\
+\indent Since 70 is divisible by 35, we can continue with $11^{2412}$ \\
+\indent $(11^3)^{804} = 1331^{804} = (1330 + 1)^{804}$ \\
+\indent Since 1330 is divisible by 35, we are left with $1^{804}$ mod 35 \\
+
+\indent ($1^{256}$ mod $35) - (1^{804}$ mod $35) = 0$ . Thus, yes it is divisible by 35.
 
 \vspace{.3in}
 \noindent 1.12) What is $2^{2^{2006}}$ mod 3 \\
