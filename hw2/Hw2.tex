@@ -55,7 +55,10 @@
 \noindent 1.25) calculate $2^{125}$ mod 127 using any method you choose \\
 \vspace{.1in}
 {\bf Answer:} \\
-\indent temp
+\indent $2^{125} = (2^{119}* 2^6) = (2^{7^{17}}* 2^6) = (128^{17}* 2^6) = (127 + 1)^{17}*2^6$ \\
+\indent Because 127 is divisible by 127, that leaves us with $1^{17}*2^6$ \\
+\indent $1^{17}*2^6 = 1 * 2^6 = 64$ \\
+\indent Thus, the answer is 64
 
 \vspace{.3in}
 \noindent 1.33) Give an efficient algorithm to compute the least common multiple of two 
