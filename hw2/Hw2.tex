@@ -61,6 +61,7 @@
 \indent $2^{125} = (2^{119}* 2^6) = (2^{7^{17}}* 2^6) = (128^{17}* 2^6) = (127 + 1)^{17}*2^6$ \\
 \indent Because 127 is divisible by 127, that leaves us with $1^{17}*2^6$ \\
 \indent $1^{17}*2^6 = 1 * 2^6 = 64$ \\
+
 \indent $\therefore$ Answer is 64
 
 \vspace{.3in}
@@ -83,7 +84,21 @@
 \indent and prime $p$. \\
 \vspace{.1in}
 {\bf Answer:} \\
-\indent temp
+\indent Fermat's little theorem: $(a^{p-1}$ mod $p) \equiv 1$ \\
+\indent Size of input suggestion: log $b$ + log $a$ + log $c$ + log $p$ \\
+
+\indent $a^{b^c}$ mod $p = a^{b^{c mod(p - 1)}}$ mod $p$ \\
+\indent $b$ mod$(p - 1) \\ 
+\indent $O($log$ b)$ * $O($log$ p)$ \Rightarrow $O($log$ b $ log$ p$)$ \\
+
+\indent By using repeat square to compute $(b^c$ mod$(p - 1))$ \\
+\indent $O($log $ c$ number of size almost $p$. Multiplication takes $O(\log^2 p)$ times \\
+
+\indent $\therefore O(\log c \log^2 p)$ \\
+
+\indent Since $b^c$ mod $(p - 1) < p$, computing $(a^{b^c}$ mod $p)$ with repeated squaring will get us $O(\log p log^2 p) = O(\log^3 p)$ \\
+
+\indent $\therefore O(\log b \log p + \log c \log^2 p + \log a\log p + \log^3 p) = O(n^3)$
 
 \vspace{.3in}
 \noindent Problem) \\
