@@ -50,9 +50,28 @@
 {\bf Answer:} \\
 
 \vspace{.3in}
-\noindent 2.28) ?\\
+\noindent 2.28) The \textit{Hadamard matrices} $H_{0}, H_{1}, H_{2}, $...are defined as follows: \\
+\begin{description}
+	\item[$\bullet$] $H_{0}$ is the 1 X 1 matrix [1]
+	\item[$\bullet$] for $k > 0, H_{k}$ is the $2^k$ x $2^k$ matrix
+\end{description}
+\indent \indent $H_{k} = $ WILL FINISHI WRITING UP THIS THING LATER\\
+
+\indent Show that if $v$ is a column vector of length $n = 2^k$, then the matrix-vector product $H_{k}v$ can be calculated using $O(n \log n)$ operations. Assume that all the numbers involved are small enough that basic arithmetic operations like addition and multiplication take unit time. \\
 \vspace{.1in}
-{\bf Answer:} \\
+{\bf Answer:} For any column vector $u$ of length $n$, let $u_{1}$ denote the column vector of length $n/2$ consisting of the first $n/2$ coordinates of $u$. Similarly, let $u_{2}$ be the vector of the remaining coordinates. Note that: \\
+
+\indent \indent \indent $(H_{k}v)_{1} = H_{k - 1}v_{1} + H_{k - 1}v_{2} = H_{k - 1}(v_{1} + v_{2})$ \\
+and \\
+\indent \indent \indent $(H_{k}v)_{2} = H_{k - 1}v_{1} - H_{k - 1}v_{2} = H_{k - 1}(v_{1} - v_{2})$ \\
+
+Recursion 1: Shows that we can find $H_{k}v$ by calculating $v_{1} + v_{2}$ and $v_{1} - v_{2}$ \\
+and recursively computing $H_{k - 1}(v_{1} + v_{2})$ and $H_{k - 1}(v_{1} - v_{2}$ \\
+
+Recursion 2: Only need to compute two subproblems, $H_{k - 1}v_{1}$ and $H_{k - 1}v_{2}$ \\
+
+Lastly, combining the solutions of the two subproblems using addition and subtraction, both taking $O(n)$ time. 
+
 
 \vspace{.3in}
 \noindent 3.5) ?\\
