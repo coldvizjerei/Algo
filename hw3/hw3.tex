@@ -74,9 +74,18 @@ Lastly, combining the solutions of the two subproblems using addition and subtra
 
 
 \vspace{.3in}
-\noindent 3.5) ?\\
+\noindent 3.5) The \textit{reverse} of a directed graph $G = (V, E)$ is another directed graph \\
+\indent $G^{R} = (V, E^{R})$ on the same vertex set, but with all edges reversed; that \\
+\indent is, $E^R =\big\{(v, u) : (u, v)$ $\epsilon$ $E\big\}$ \\
+
+Give a linear-time algorithm for computing the reverse of a graph in \\
+adjacency list format. \\
 \vspace{.1in}
 {\bf Answer:} \\
+\indent 1 for each edge $(v, u)$ $\epsilon$ $E$ \\
+\indent 2 \indent do reverse $(v, u)$ to get $(u, v)$ \\
+
+The algorithm runs in time $O(n)$ because it does a constant amount of work for each of the $O(n)$ edges. We simply look at each element of the edge list in our adjacency list representation and swap the vertices.
 
 \vspace{.3in}
 \noindent 3.31) ?\\
