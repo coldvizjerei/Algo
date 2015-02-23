@@ -16,9 +16,58 @@
 
 \vspace{.2in}
 \noindent 2.4) Suppose you are choosing between the following three algorithms: \\
+\begin{description}
+	\item[$\bullet$] Algorithm $A$ solves problems by dividing them into five subproblems of half 	the size, recursively solving each subproblem, and then combining the solutions in linear time.
+	\item[$\bullet$] Algorithm $B$ solves problems of size $n$ by recursively solving two subproblems of size $n - 1$ and then combining the solutions in constant time.
+	\item[$\bullet$] Algorithm $C$ solves problems of size $n$ by dividing them into nine subproblems of size $n/3$, recursively solving each subproblem, and then combining the solutions in $O(n^2)$ time.
+\end{description}
+\vspace{.1in}
+{\bf Answer:} \\
+\begin{description}
+	\item[$\bullet$] $T(n) = 5 * T(n/2) + c n$. \\
+	Applying master theorem a = 2, b = 5, f(n) = c n, degree(f(n)) = 1 \\
+	Since $\log_2 5 > 1, T(n) = O(n^{\log_a b}) = O(n^{\log_2 5})$
+	\item[$\bullet$] $T(n) = 2T(n - 1) + c$. $\therefore T(n) = O(2^n)$
+	\item[$\bullet$] $T(n) = 9T(\frac{n}{3}) + cn^2$. \\
+	Applying master theorem a = 3, b = 9, $f(n) = c n^2$, degree(f(n)) = 2 \\
+	Since $\log_3 9 = 2, T(n) = O(n^2 \log n)$
+\end{description}
+\indent Time complexity of the third algorithm is the best. $\therefore$ choose algorithm C 
+ 
+\vspace{.3in}
+\noindent 2.5) ?\\
 \vspace{.1in}
 {\bf Answer:} \\
 
+\vspace{.3in}
+\noindent 2.14) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
+
+\vspace{.3in}
+\noindent 2.25) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
+
+\vspace{.3in}
+\noindent 2.28) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
+
+\vspace{.3in}
+\noindent 3.5) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
+
+\vspace{.3in}
+\noindent 3.31) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
+
+\vspace{.3in}
+\noindent 3.43) ?\\
+\vspace{.1in}
+{\bf Answer:} \\
 
 
 \end{document}
