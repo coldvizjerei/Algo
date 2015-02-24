@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{amssymb}
+\usepackage{amsmath}
 
 \begin{document}
 \begin{center}
@@ -54,8 +55,13 @@
 \begin{description}
 	\item[$\bullet$] $H_{0}$ is the 1 X 1 matrix [1]
 	\item[$\bullet$] for $k > 0, H_{k}$ is the $2^k$ x $2^k$ matrix
-\end{description}
-\indent \indent $H_{k} = $ WILL FINISHI WRITING UP THIS THING LATER\\
+\end{description}  
+	
+\indent \indent \indent \indent \indent \indent \indent \indent \indent $H_{k} = $
+$\begin{bmatrix}
+	H_{k - 1} & H_{k - 1} \\
+	H_{k - 1} & -H_{k - 1} \\
+\end{bmatrix}$ \\
 
 \indent Show that if $v$ is a column vector of length $n = 2^k$, then the matrix-vector product $H_{k}v$ can be calculated using $O(n \log n)$ operations. Assume that all the numbers involved are small enough that basic arithmetic operations like addition and multiplication take unit time. \\
 \vspace{.1in}
