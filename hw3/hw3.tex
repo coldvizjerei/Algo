@@ -43,22 +43,46 @@
 \indent \indent $(n_{i} A = a_{i} ...a_{n}, B - B_{i} ...b_{n})$ \\
 \indent \indent $a = 2, b = 3, d = f(n) = O(1) = 0 $ \\
 \indent \indent $d>< \log_b a = 0 < \log_3 2$ \\
-\indent \indent $\therefore O(n^{\log_3 2})$ \\
+\indent \indent $\therefore \Theta(n^{\log_3 2})$ \\
 
 \indent (b) $T(n) = 5T(n/4) + n$ \\
 \indent \indent $a = 5, b = 4, d = f(n) = O(n) = 1$ \\
 \indent \indent $d ><log_b a = 1 < log_4 5$ \\
-\indent \indent $\therefore O(n^{log_4 5})$ \\
+\indent \indent $\therefore \Theta(n^{log_4 5})$ \\
 
 \indent (c) $T(n) = 7T(n/7) + n$ \\
 \indent \indent $a = 7, b = 7, d = 1$ \\
 \indent \indent $d >< \log_b a = 1 < log_7 7 = 1 < 1$ \\
-\indent \indent $\therefore O(n \log n)$ \\
+\indent \indent $\therefore \Theta(n \log n)$ \\
 
 \indent (d) $T(n) = 9T(n/3) + n^2$ \\
 \indent \indent $a = 9, b = 3, d = f(n) = O(n^2) = 2$ \\
 \indent \indent $d >< \log_b a = 2 \log_3 9 = \frac{\log 9} {\log 3}$ \\
-\indent \indent $\therefore O(n^{2} \log n)$ \\
+\indent \indent $\therefore \Theta(n^{2} \log n)$ \\
+
+\indent (e) $T(n) = 8T(n/2) + n^3$ \\
+\indent \indent $a = 8, b = 2, k = 3, d = 0$ \\
+\indent \indent $8 <= 2^3$ \\
+\indent \indent $\therefore T(n) = \Theta(n^3 / \log n) = T(n) = \Theta(n^3)$ \\
+
+\indent (f) $T(n) = 49T(n/25) + n^{3/2} \log n$ \\
+\indent \indent $a = 49, b = 25, k = 3/2, d = 1$ \\
+\indent \indent $49 > 25^{3/2}$ \\
+\indent \indent $T(n) = \Theta(n^{log_{25} 49})$ \\
+
+\indent (g) \\
+
+\indent (h) $T(n) = T(n - 1) + n^c$ where $c >= 1$ is a constant \\
+\indent \indent $T(n) = T(n - 1) + n^c = \Theta(n^{(c + 1)})$ \\
+
+\indent (i) $T(n) = T(n - 1) + c^n$ where $c > 1$ is some constant \\
+\indent \indent $\Theta(c^n)$ \\
+
+\indent (j) $T(n) = 2T(n - 1) + 1$ \\
+\indent \indent Substitution $T(n - 1) = c(2^{n - 1} - 1)$ \\
+\indent \indent Plugging into recurrence $T(n) = 2c(2^{n - 1} - 1) + c = c(2^n - 1) = \Theta(2^n)$ \\
+
+\indent (k)
 
 \vspace{.3in}
 \noindent 2.14) You are given an array of $n$ elements, and you notice that some of the elements are duplicates; that is, they appear more than once in the array. Show hoe to remove all duplicates from the area in time $O(n \log n)$\\
