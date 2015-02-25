@@ -39,6 +39,26 @@
 \noindent 2.5) Solve the following recurrence relations and give a $\Theta$ bound for each of them.\\
 \vspace{.1in}
 {\bf Answer:} \\
+\indent (a) $T(n) = 2T(n/3) + 1$ \\
+\indent \indent $(n_{i} A = a_{i} ...a_{n}, B - B_{i} ...b_{n})$ \\
+\indent \indent $a = 2, b = 3, d = f(n) = O(1) = 0 $ \\
+\indent \indent $d>< \log_b a = 0 < \log_3 2$ \\
+\indent \indent $\therefore O(n^{\log_4 5})$ \\
+
+\indent (b) $T(n) = 5T(n/4) + n$ \\
+\indent \indent $a = 5, b = 4, d = f(n) = O(n) = 1$ \\
+\indent \indent $d ><log_b a = 1 < log_4 5$ \\
+\indent \indent $\therefore O(n^{log_4 5})$ \\
+
+\indent (c) $T(n) = 7T(n/7) + n$ \\
+\indent \indent $a = 7, b = 7, d = 1$ \\
+\indent \indent $d >< \log_b a = 1 < log_7 7 = 1 < 1$ \\
+\indent \indent $\therefore O(n \log n)$ \\
+
+\indent (d) $T(n) = 9T(n/3) + n^2$ \\
+\indent \indent $a = 9, b = 3, d = f(n) = O(n^2) = 2$ \\
+\indent \indent $d >< \log_b a = 2 \log_3 9 = \frac{\log 9} {\log 3}$ \\
+\indent \indent $\therefore O(n^{2} \log n)$ \\
 
 \vspace{.3in}
 \noindent 2.14) You are given an array of $n$ elements, and you notice that some of the elements are duplicates; that is, they appear more than once in the array. Show hoe to remove all duplicates from the area in time $O(n \log n)$\\
@@ -46,7 +66,7 @@
 {\bf Answer:} Simply sort the elements of the array using merge sort in $O(n \log n)$ time and then remove the duplicate elements by traversing the sorted array.\\
 
 \vspace{.3in}
-\noindent 2.25) ?\\
+\noindent 2.25) \\
 \vspace{.1in}
 {\bf Answer:} \\
 
