@@ -8,7 +8,7 @@
 \bf{\LARGE CS344: Design and Analysis of Computer Algorithms} \\*
 
 \vspace{0.2in}
-{\bf {\Large Homework 3}}
+{\bf {\Large Homework 6}}
 \end{center}
 
 \vspace{.2in}
@@ -25,8 +25,27 @@
 
 \noindent \textbf{\underline{Solution:}}  \\
 
-DRAWINGS GO HERE \\
+We have the drawn graphs, but are not very capable of drawing graphs using LaTeX. Did not have enough time to learn how to draw it on LaTeX so instead, these are the nodes, and what paths each nodes have to other nodes. \\
+i) \\
+\indent A $\rightarrow$ [B, E] \\
+\indent C $\rightarrow$ [A, J]\\
+\indent D $\rightarrow$ [C]\\
+\indent F $\rightarrow$ [D, H]\\
+\indent G $\rightarrow$ [B, H]\\
+\indent H $\rightarrow$ [A, I]\\
+\indent I $\rightarrow$ [E, G]\\
+\indent J $\rightarrow$ [F]\\
 
+\noindent ii) \\
+\indent A $\rightarrow$ [E] \\
+\indent B $\rightarrow$ [A] \\
+\indent C $\rightarrow$ [B] \\
+\indent D $\rightarrow$ [A] \\
+\indent E $\rightarrow$ [B] \\
+\indent F $\rightarrow$ [C, H] \\
+\indent G $\rightarrow$ [H] \\
+\indent H $\rightarrow$ [D, E, I] \\
+\indent I $\rightarrow$ [F, H] \\
 
 \noindent i) a) For graph i the ordering is \\
 SCC 1 $\{C, J, F, H, I, G, D\}$\\ 
@@ -34,16 +53,20 @@ SCC 2 $\{A, E, B\}$ \\
 
 \noindent i) b) SCC 1 the node with the highest post number, C, so it is a source SCC in $G^R$ and a sink SCC in G. SCC 2 is a source SCC in $G^R$ and a sink SCC in G \\
 
-\noindent i) a) For graph ii \\
+\noindent i) c) (A, E, B ) $\rightarrow$ (C, J, F, H, I G, D)\\
+
+\noindent ii) a) For graph ii \\
 SCC 1$\{D, G, H, I, F\}$ \\
 SCC 2 $\{C\}$ \\
 SCC 3 $\{A, E, B\}$\\
 
-\noindent i) b) SCC 1 the node with the highest post number is D, so it s a source SCC in $G^R$ and a sink SCC in G. SCC 3 is the source SCC in G since A has the highest post number in a DFS of G\\
+\noindent ii) b) SCC 1 the node with the highest post number is D, so it s a source SCC in $G^R$ and a sink SCC in G. SCC 3 is the source SCC in G since A has the highest post number in a DFS of G\\
 
-\noindent i) c) \\
+\noindent ii) c) (A, E, B) $\rightarrow$ (C)\\
+\indent \indent $\downarrow$ \indent \indent \indent$\downarrow$ \\
+\indent \indent (D, G, H, I, F) \\
 
-\noindent i) d) Since the meta graphs reveal a DAG, adding any edge from the sink to source will create a cycle , and make the entire graph strongly connected \\
+\noindent ii) d) Since the meta graphs reveal a DAG, adding any edge from the sink to source will create a cycle, and make the entire graph strongly connected \\
 
 \vspace{.2in}
 \noindent \textbf{\underline{3.5)}} The reverse of a directed graph G = (V, E) is another directed graph $G^R = (V, E^R)$ on the same vertex set, but with all edges reversed. Give a linear-time algorithm for computing the reverse of a graph in adjacency list format. \\
@@ -70,9 +93,27 @@ Perform a DFS. The node with the highest post number will be a vertex in a sourc
 \vspace{.2in}
 \noindent \textbf{\underline{3.25)}} \\
 
-
+\noindent \textbf{\underline{Solution:}}  \\
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
