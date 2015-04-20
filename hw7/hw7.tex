@@ -23,6 +23,7 @@
 
 \noindent \textbf{\underline{Solution:}}  \\
 a) \\
+
 \begin{tabular}{ | c c c c c c c c |}
   \hline
   A & B & C & D & E & F & G & H\\ \hline
@@ -48,12 +49,13 @@ a) \\
 
 
 \vspace{.2in}
-\noindent \textbf{\underline{4.3)}} Suppose.\\
+\noindent \textbf{\underline{4.3)}} \\
 
 \noindent \textbf{\underline{Solution:}}  \\
 
 
-\vspace{.2in}
+
+\vspace{2in}
 \noindent \textbf{\underline{4.5)}} Often there are multiple shortest paths between two nodes of a graph. Give a linear-time algorithm for the following task. \\
 
 \indent \textit{Input:} Undirected graph G = (V, E) with unit edge lengths nodes $u, v \in V$ \\
@@ -93,12 +95,14 @@ As a side effect, the algorithm finds the number of shortest paths from u to all
 23 return paths[v] \\
 
 \vspace{.2in}
-\noindent \textbf{\underline{4.14)}} Suppose.\\
+\noindent \textbf{\underline{4.14)}} \\
 
-\noindent \textbf{\underline{Solution:}}  \\
+\noindent \textbf{\underline{Solution:}}  We run Dijkstra's once with $V_{0}$ as the source. Reverse the graph. Run Dijstra's again fro, $V_{0}$ For each node, ordered pair (a, b) add the shortest path from $V_{0}$ to b and the shortest path from $V_{0}$ to a in the reverse graph.\\
+\indent Shortest path (a,b)\\
+\indent $V_{0}$ a to b $\cup$ a to $V_{0}$ and $V_{0}$ to b \\
 
 \vspace{.2in}
-\noindent \textbf{\underline{4.15)}} Suppose.\\
+\noindent \textbf{\underline{4.15)}} \\
 
 \noindent \textbf{\underline{Solution:}}  \\
 
